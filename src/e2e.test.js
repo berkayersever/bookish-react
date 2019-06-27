@@ -46,6 +46,12 @@ describe('Bookish', () => {
 
         const url = await page.evaluate('location.href');
         expect(url).toEqual(`${appUrlBase}/books/1`);
+
+        await page.waitForSelector('.description');
+        const result = await page.evaluate(() => {
+            return document.querySelector('.description').innerText;
+        });
+        expect(result).toEqual('Refactoring');
     })
 });
 
