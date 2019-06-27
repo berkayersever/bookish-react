@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer';
+import axios from 'axios';
 
 const appUrlBase = 'http://localhost:3000';
 
@@ -11,6 +12,19 @@ beforeAll(async () => {
 });
 
 describe('Bookish', () => {
+    afterEach(() => {
+        return axios.delete('http://localhost:8080/books?_cleanup=true').catch(err => err);
+    });
+
+    beforeEach(() => {
+        const books = [
+            {"name": "Refactoring", "id": 1},
+            {"name": "Domain-driven design", "id": 2},
+            {"name": "Building Micro-service", "id": 3}
+        ];
+        return books.map(item => axios.post('http://localhost:8080/books', item, {headers: { 'Content-Type': 'application/json' }}));
+    });
+
     test('Heading', async () => {
         await page.goto(`${appUrlBase}/`);
         await page.waitForSelector('h1');
