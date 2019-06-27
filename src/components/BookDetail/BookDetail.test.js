@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import BookDetail from './components/BookDetail/BookDetail';
+import BookDetail from './BookDetail';
 
 describe('BookDetail', () => {
     it('Shows description', () => {
