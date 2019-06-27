@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
-import BookDetailContainer from './BookDetailContainer';
-import BookListContainer from './BookListContainer';
+import BookDetailContainer from './containers/BookDetailContainer';
+import BookListContainer from './containers/BookListContainer';
 
 function App() {
     return (
