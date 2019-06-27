@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 
 function Index({loading, error, books}) {
     if(loading) { return <div className="loading"/> }
