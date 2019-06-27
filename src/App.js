@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
+import BookDetailContainer from './BookDetailContainer';
 import BookListContainer from './BookListContainer';
 
 function App() {
@@ -7,6 +9,10 @@ function App() {
         <div className="App">
             <h1>Bookish</h1>
             <BookListContainer/>
+            <main>
+                <Route exact path="/" component={BookListContainer}/>
+                <Route path="/books/:id" component={BookDetailContainer}/>
+            </main>
         </div>
     );
 }
