@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import BookList from './BookList';
 import './App.css';
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            books: []
+        };
+    };
+
+    componentDidMount() {
+        axios.get('http://localhost:8080/books').then(res => {
+            this.setState({
+                books: res.data
+            });
+        });
+    }
+
     render() {
-        const books = [{ name: 'Refactoring' }, { name: 'Domain-driven design' }];
+        const {books} = this.state;
         return (
             <div className="App">
                 <h1>Bookish</h1>
