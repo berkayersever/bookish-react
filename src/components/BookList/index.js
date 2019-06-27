@@ -1,6 +1,6 @@
 import React from 'react';
 
-function BookList({loading, error, books}) {
+function Index({loading, error, books}) {
     if(loading) { return <div className="loading"/> }
     if(error)   { return <div className="error"/> }
 
@@ -16,4 +16,4 @@ function BookList({loading, error, books}) {
     </div>)
 }
 
-export default BookList;
+export default Index;
