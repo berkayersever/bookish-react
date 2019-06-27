@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import BookDetail from './BookDetail';
+import Index from './BookDetail';
 
 describe('BookDetail', () => {
     it('Shows description', () => {
@@ -10,7 +10,7 @@ describe('BookDetail', () => {
                 description: "The book about how to do refactoring"
             }
         };
-        const wrapper = shallow(<BookDetail {...props}/>);
+        const wrapper = shallow(<Index {...props}/>);
         expect(wrapper.find('.description').text()).toEqual("The book about how to do refactoring");
     });
     it('Shows book name', () => {
@@ -20,7 +20,7 @@ describe('BookDetail', () => {
                 description: "The book about how to do refactoring"
             }
         };
-        const wrapper = shallow(<BookDetail {...props}/>);
+        const wrapper = shallow(<Index {...props}/>);
         expect(wrapper.find('.name').text()).toEqual("Refactoring");
     })
 });
