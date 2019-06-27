@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/bookish-react.iml" filepath="$PROJECT_DIR$/.idea/bookish-react.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/burger-app.iml" filepath="$PROJECT_DIR$/.idea/burger-app.iml" />
     </modules>
   </component>
 </project>
