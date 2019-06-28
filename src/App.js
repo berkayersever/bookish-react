@@ -1,14 +1,14 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
-import BookDetailContainer from './containers/BookDetailContainer';
-import BookListContainer from './containers/BookListContainer';
+import BookDetailContainer from './containers/BookDetailContainer/index';
+import BookListContainer from './containers/BookListContainer/index';
 
 function App() {
     return (
-        <div className="App">
+        <div className="container">
             <h1>Bookish</h1>
-            <BookListContainer/>
+            {/*<BookListContainer/>*/}
             <main>
                 <Route exact path="/" component={BookListContainer}/>
                 <Route path="/books/:id" component={BookDetailContainer}/>
