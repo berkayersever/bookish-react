@@ -8,7 +8,6 @@ function App() {
     return (
         <div className="container">
             <h1>Bookish</h1>
-            {/*<BookListContainer/>*/}
             <main>
                 <Route exact path="/" component={BookListContainer}/>
                 <Route path="/books/:id" component={BookDetailContainer}/>
