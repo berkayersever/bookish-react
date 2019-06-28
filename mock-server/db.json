@@ -5,6 +5,18 @@
     },
     {
       "name": "Domain-driven design"
+    },
+    {
+      "name": "Refactoring",
+      "id": 1
+    },
+    {
+      "name": "Building Micro-service",
+      "id": 3
+    },
+    {
+      "name": "Domain-driven design",
+      "id": 2
     }
   ]
 }
