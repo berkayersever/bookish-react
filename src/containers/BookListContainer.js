@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Index from '../components/BookList/index';
+import BookList from '../components/BookList/index';
 
 class BookListContainer extends Component {
     constructor(props) {
@@ -27,7 +27,12 @@ class BookListContainer extends Component {
     };
 
     render() {
-        return <Index {...this.state} />;
+        return (
+            <div>
+                <input type="text" className="search" placeholder="Type to search" />
+                <BookList {...this.state} />
+            </div>
+        );
     }
 }
 
